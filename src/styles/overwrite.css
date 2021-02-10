@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&family=Titillium+Web:wght@400;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --navbar-color: #515f64;
+    --navbar-text-color: #d8e7d3;
+    --navbar-text-color-hover: #74cda7;
+    --navbar-font: 'Titillium Web', sans-serif;
+    --main-text-color: #dae9d4;
+    --main-text-font-family: 'Josefin Sans', sans-serif;
+    --hr-bg-color: #525e65;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.nav-bg-color {
+    background-color: var(--navbar-color);
+}
+
+a {
+    color: var(--navbar-text-color);
+    font-family: var(--navbar-font);
+    font-size: 1.6rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--navbar-text-color-hover);
+}
+
+.navbar .navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar .navbar-nav .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--navbar-text-color-hover);
+    color: transparent;
+    width: 0%;
+    content: '';
+    height: 3px;
+    transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.main {
+    background-color: #252B37;
+    color: var(--main-text-color);
+    height: 94.7vh;
+    width: 100vw;
+}
+
+h1 {
+    font-family: var(--main-text-font-family);
+    font-weight: 100;
+    font-size: 8rem;
+    letter-spacing: 1.5rem;
+}
+
+h2 {
+    font-family: var(--main-text-font-family);
+    font-weight: 700;
+}
+
+h3 {
+    font-family: var(--main-text-font-family);
+    font-weight: 400;
+    font-size: 3.2rem;
+    letter-spacing: 0.5rem;
+}
+
+img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+hr {
+    background-color: var(--hr-bg-color);
+    height: 0.3rem;
+}
